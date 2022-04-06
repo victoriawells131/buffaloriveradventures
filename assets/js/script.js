@@ -1,40 +1,51 @@
-async function AlertLevel(){
+async function ShowLevel(){
 
-           document.getElementById("DisplayLevel").addEventListener("click", AlertLevel());
+           document.getElementById("DisplayLevel").addEventListener("click", ShowLevel());
 
+      // constant variable for api url
+     const myUrl1 = 'https://waterservices.usgs.gov/nwis/iv/?format=json&indent=on&sites=07055660&parameterCd=00065&siteStatus=active'; 
 
-     const list = document.createDocumentFragment(); // create a doc frag list for the appended list items
+         //make the AJAX Call
+         var msg1Object = await fetch(myUrl1);
 
-     const url = 'https://waterservices.usgs.gov/nwis/iv/?format=json&indent=on&sites=07055660&parameterCd=00065&siteStatus=active'; // constant variable for api url
-
-         fetch(url)
-                .then((response)=>{ // create then method 
-                    return response.json(); // add response parameter that takes the value of the object returned from the fetch(url)
-                })
-                 .then((data) => { // this processes the data
-                        let WaterLevels = data; // Within this function, create a variable called authors that is set equal to data:
-
-                        WaterLevels.map(function(Waterlevel) {
-                                let li = document.createElement('li'); // argument to create li
-                                let name = document.createElement('h2'); // river site name
-                                let email = document.createElement('span'); // river level
-
-                                name.innerHTML = '${siteName}'; // grab data from api
-                                email.innerHTML = '${longitude}'; // grab data from api
-
-                                li.appendChild(name); // connect the DOM elements to html
-                                li.appendChild(email);
-                                list.appendChild(li);
-
-                        });
-                 }).
-                 catch(function(error) {
-                        console.log(error);
-                 });
-
-                 ul.appendChild(list);
-
+         //Check the Staus
+         if (msg1Object.status >= 200 && msg1Object.status <= 299) {            
+              var msg1JSONText = await msg1Object.text();
+              // Parse the JSON string into an object
+              var msg1 = JSON.parse(msg1JSONText);
+              /* Your code to process the result goes here - 
+                 display the returned message */
+             
+              
+          }
    
+              // set variables to pull certain values from returned data
 
+              var sitename = [];
+              var agencycode = [];
+              var numdays = msg1.results.length;
+              if (numdays > 0){
+                     for (var i = 0; i < numdays; i++) {
+                            /* sitename value */
+                            sitename[i] = msg1.results[i].siteName;
+                            /* agency code value */
+                            agencycode[i] = msg1.results[i].agencyCode;
+                            /* date is in Unix milleseconds - create a temporary date variable */
+                            var numdays = new Date(msg1.results[i].t);
+                            /* extract the date string from the value */
+                            currencydate[i] = msg1.results[i].dateTime;
+                        }
+              }
+
+               /* convert these tables to currency conversion */
+               var sitenametable = "";
+               if (numdays > 0) {
+                     sitenametable = sitenametable + "<table><caption>sitename</caption><tr><th>Date</th><th>agencycode</th></tr>";
+                   for (var i = 0; i < numdays; i++) {
+                     sitenametable = sitename[i] + "<tr><td>" + numdays[i] + "</td><td>" + agencycode[i] + "</td></tr>";
+                   }
+                   sitenametable = sitenametable + "</table>"
+                   document.getElementById("sitenametable").innerHTML = sitenametable;
+               }
 
 }
