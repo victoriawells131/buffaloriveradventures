@@ -26,19 +26,19 @@
 
                 
 
-                    <input type ="button" value="DisplayLevel" id="DisplayLevel" name="DisplayLevel" onclick="ShowLevel();"></button>
-
+                <body onload="ShowLevel()">
                     
-                
+                    <div id="dates"></div>
+
+                    <div id="values"></div>
 
                 <br><br>
                  
                 <hr>
 
-                <div class="clearfix">
-                    <div class="img-container">
-                        <span id="sitenametable"></span>
-                    </div><!-- img-container closing div -->
+                <canvas id="chartjs" width="400" height="400"></canvas>
+
+                <div id="msg"></div>
                     
            </div><!-- clearfix closing div -->
 
@@ -53,6 +53,6 @@
             <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
             <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 
-            <script src="/assets/js/script.js"></script>
+            <script src="assets/js/script.js"></script>
 
     </html>
