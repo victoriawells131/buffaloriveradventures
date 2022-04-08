@@ -9,44 +9,16 @@
       <meta name="keywords" content="BUffalo River,Camping,Cabins"/>
       <link href="/assets/css/styles.css" rel="stylesheet">
           <!-- finishing up head section -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>    
     </head>
 
-    <body>
+    <body onload="ShowLevel();">
 
-        <div class="container">
+        <p>Boxley AR Site</p>
 
-            <header>
-                <nav></nav>
-            </header>
+        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>   
 
-            <section class="landing">
-                <!--section landing opening-->
-
-
-
-                
-
-                <body onload="ShowLevel()">
-                    
-                    <div id="dates"></div>
-
-                    <div id="values"></div>
-
-                <br><br>
-                 
-                <hr>
-
-                <canvas id="chartjs" width="400" height="400"></canvas>
-
-                <div id="msg"></div>
-                    
-           </div><!-- clearfix closing div -->
-
-
-            </section>
-
-
-        </div>
+        
     </body>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
