@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
       <!-- starting head section -->
@@ -6,101 +5,79 @@
       <meta charset="utf-8"/>
       <meta name= "description" content="Buffalo River Adventures" />
       <meta name="author" content="Team Rocket Dev"/>
-      <meta name="keywords" content="BUffalo River,Camping,Cabins"/>
-      <link href="/assets/css/styles.css" rel="stylesheet">
-          <!-- finishing up head section -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>    
+      <meta name="keywords" content="BUffalo River, Camping, Cabins"/>
+      <link href="assets/css/lightbox.min.css" rel="stylesheet">
+      <link href="assets/css/styles.css" rel="stylesheet">
     </head>
+    
 
     <body>
-
-    <header class="navbar"> <!-- navbar section -->
-
-        <ul>
-            <li><a href="index.html">Home</a></li>
+        <header class="navbar"> <!-- navbar section -->
+            <div class="brand">
+                <a href="index.html" class="svg"><object data="assets/img/svg/color-logo.svg" class="logo"></object></a>
+            </div>
+            <nav class="primary">
+            <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="adventures.html">Advenures</a></li>
                 <li><a href="explore.html">Explore</a></li>
                 <li><a href="level.html">Water Level</a></li>
                 <li><a href="about.html">About</a></li>
-        </ul>
+            </ul>
+        </nav>       
+        </header> <!-- navbar section closing -->
+        <section class="masthead">
+            <div></div>
+        </section>
+        <section class="home">
+            <div class="content">
+                <article class="card">
+                    <a href="adventure.html" class="title">Adventure</a>
+                </article>
 
+                 <article class="card">
+                   <a href="explore.html" class="title">Explore</a>
+                </article>
 
-    
-    </header> <!-- navbar section closing -->
+                <article class="card">
+                    <a href="level.html">Water Levels</a>
+                </article>
+  
+                 <article class="card">
+                    <a href="about.html">Directions</a>
+                </article>
 
-    <section class="" id=""> <!-- first section section opening-->
-     <h1>lorem Ipsum</h1>
-    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, sapiente dolorem iure optio enim velit sequi quaerat vero excepturi cumque alias commodi accusamus? Quia culpa neque modi saepe dignissimos adipisci!</P>
-    </section> <!-- first section section closing -->
-
-        <section class="" id=""> <!-- second section section opening -->
-         <h2>Lorem Ipsum</h2>
-        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio alias itaque mollitia. Dolores ipsum aut adipisci. Quam molestiae dolorem laboriosam deserunt quo quod nostrum sequi voluptatum, quia, ipsa reprehenderit voluptatibus!</P>
-        </section><!-- second section section closing -->
-
-        <section class="" id=""> <!-- Adventures Secion three section opening -->
-            <h2>Lorem Ipsum</h2>
-           <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio alias itaque mollitia. Dolores ipsum aut adipisci. Quam molestiae dolorem laboriosam deserunt quo quod nostrum sequi voluptatum, quia, ipsa reprehenderit voluptatibus!</P>
-           </section><!-- section three section closing -->
-    
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/h_fUIW7G1IM?start=40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-    <videosrc="" alt="rafting video"></video><!-- optional -->
-
-
-
-
-
-       <section class="level" id="level"></section>
-       <body onload="ShowLevel()">
-        <div class="clearfix">
-            <div class="img-container">
-                <canvas id="chartjs-0" width="400" height="400"></canvas> 
-                <canvas id="chartjs-1" width="400" height="400"></canvas>
-                <canvas id="chartjs-2" width="400" height="400"></canvas> 
-                <canvas id="chartjs-3" width="400" height="400"></canvas>
-                </div>
+                <article class="card">
+                    <a href="reserve.html" class="title">Reserve Now</a>
+                </article>
             </div>
+        </section>
+        <section class="gallery">
+            <div>
+                <a class="example-image-link" href="assets/img/demo1.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+                    <img class="example-image" src="assets/img/demo1.jpg" alt=""/></a>
+                <a class="example-image-link" href="assets/img/demo2.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard.">
+                    <img class="example-image" src="assets/img/demo2.jpg" alt="" /></a>
+                <a class="example-image-link" href="assets/img/demo3.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing.">
+                    <img class="example-image" src="assets/img/demo3.jpg" alt="" /></a>
+              </div>
+        </section>
+       
+        <footer class="" id="">
+            <div class="brand">
+            <a href="index.html" class="svg"><object data="assets/img/svg/color-logo.svg" class="logo"></object></a>
         </div>
-
-        <section class="" id=""> <!-- gallery secion -->
-            <div class="gallery">
-                <a target="_blank" href="assets/img/demo1.jpg">
-                  <img src="assets/img/demo1.jpg" alt="Cinque Terre" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-              </div>
-              
-              <div class="gallery">
-                <a target="_blank" href="assets/img/demo2.jpg">
-                  <img src="assets/img/demo2.jpg" alt="Forest" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-              </div>
-              
-              <div class="gallery">
-                <a target="_blank" href="assets/img/demo3.jpg">
-                  <img src="assets/img/demo3.jpg" alt="Northern Lights" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-              </div>
-              
-              <div class="gallery">
-                <a target="_blank" href="img_mountains.jpg">
-                  <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-              </div>
-        </section> <!-- gallery secion -->
-
-
-    <footer class="" id=""> Company Logo | Map | Address</footer> <!-- footer = LOGO | MAP | Address -->
-
-
+        <div class="directions"> map code  float left + address</div>
+        <nav class="footer-nav">
+                <ul>
+                    <li><a href="adventures.html">Advenures</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="level.html">Water Level</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+        </nav>
+    </footer>
+    <!-- lightbox js for gallery above footer-->
+        <script src="assets/js/lightbox-plus-jquery.min.js"></script>
     </body>
-            <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-            <script src="assets/js/script.js"></script>
-
-    </html>
+</html>
