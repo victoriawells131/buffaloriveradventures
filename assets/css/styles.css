@@ -34,6 +34,9 @@ header {
   display: flex;
   justify-content: space-between;
 }
+footer {
+  background-color: #fff7e9;
+}
 
 .navbar {
   display: flex;
